@@ -1,0 +1,34 @@
+html {
+  background: url(../img/jordanRight.jpg) no-repeat fixed right top;
+
+.ComingSoon {
+  z-index:2;
+  text-align:center;
+  margin-top:15%;
+}
+  .ComingSoon h1 {
+    font-size:300%;
+    font-weight: 600;
+
+  }
+  .ComingSoon i {
+    font-size: 2em;
+    font-weight: 100;
+
+  }
+@media (max-width:1024px) {
+}
+@media (max-width:480px) {
+}
+
+/* Smartphones (portrait) ----------- */
+	@media (max-width:320px) {
+  .ComingSoon h1 {
+    font-size:200%;
+    font-weight: 600;
+  }
+  .ComingSoon i {
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+}
