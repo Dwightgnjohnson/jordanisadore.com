@@ -1,0 +1,120 @@
+<?php
+/**
+ * jordan Theme Customizer
+ *
+ * @package jordan
+ */
+
+/**
+ * Add postMessage support for site title and description for the Theme Customizer.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function jordan_customize_register( $wp_customize ) {
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	/* new section */
+	$wp_customize->add_section( 'jordan_footer' , array(
+    'title'      => __( 'Footer', 'jordan' ),
+    'priority'   => 999,
+	) );
+
+	/* footer text */
+	$wp_customize->add_setting( 'footer_text', array(
+      'default' => 'jordan Theme powered by WordPress',
+    ) );
+
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'footer_text', array(
+	'label'      => __( 'Footer text', 'jordan' ),
+	'section'    => 'jordan_footer',
+	) ) );
+
+	/* Colors extended */
+	$colors = array();
+
+	$colors[] = array(
+		'slug'=>'title_text_color', 
+		'default' => '#4B4A47',
+		'label' => __('Site Title Text Color', 'jordan')
+		);
+
+	$colors[] = array(
+		'slug'=>'footer_text_color', 
+		'default' => '#808080',
+		'label' => __('Footer Text Color', 'jordan')
+		);
+
+	$colors[] = array(
+		'slug'=>'footer_link_color', 
+		'default' => '#c2c2c2',
+		'label' => __('Footer Link Color', 'jordan')
+	);
+
+	$colors[] = array(
+		'slug'=>'icon_color', 
+		'default' => '#EF3636',
+		'label' => __('Icon Color', 'jordan')
+	);
+
+	$colors[] = array(
+		'slug'=>'about_page_color', 
+		'default' => '#FFFFFF',
+		'label' => __('Aboute Me Page Background Color', 'jordan')
+	);
+	
+	foreach( $colors as $color ) {
+		// SETTINGS
+		$wp_customize->add_setting(
+			$color['slug'], array(
+				'default' => $color['default'],
+				'type' => 'option', 
+				'capability' => 
+				'edit_theme_options'
+			)
+		);
+		// CONTROLS
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				$color['slug'], 
+				array('label' => $color['label'], 
+				'section' => 'colors',
+				'settings' => $color['slug'])
+			)
+		);
+	}
+
+
+
+	$wp_customize->add_section( 'global_options', array(
+    'title'          => 'Global Options',
+	) );
+
+	$wp_customize->add_setting( 'show_icons', array(
+	'default'        => true,
+	'transport'  =>  'postMessage'
+	) );
+
+	$wp_customize->add_control(
+	'show_icons',
+	array(
+	    'section'   => 'global_options',
+	    'label'     => 'Show Post Icons?',
+	    'type'      => 'checkbox'
+	     )
+	 );
+ 
+
+
+}
+add_action( 'customize_register', 'jordan_customize_register' );
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function jordan_customize_preview_js() {
+	wp_enqueue_script( 'jordan_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+}
+add_action( 'customize_preview_init', 'jordan_customize_preview_js' );
