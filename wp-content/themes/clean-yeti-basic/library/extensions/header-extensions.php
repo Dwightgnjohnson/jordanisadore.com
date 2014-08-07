@@ -7,7 +7,7 @@
  *
  *
  * Display the DOCTYPE
- * 
+ *
  * Filter: cleanyetibasic_create_doctype
  */
 
@@ -22,7 +22,7 @@ function cleanyetibasic_create_doctype() {
 
 /**
  * Display the HEAD profile
- * 
+ *
  * Filter: cleanyetibasic_head_profile
  */
 function cleanyetibasic_head_profile() {
@@ -33,12 +33,12 @@ function cleanyetibasic_head_profile() {
 
 /**
  * Display the META content-type
- * 
+ *
  * Filter: cleanyetibasic_create_contenttype
  */
 function cleanyetibasic_create_contenttype() {
     $content = "<meta http-equiv=\"Content-Type\" content=\"";
-    $content .= get_bloginfo('html_type'); 
+    $content .= get_bloginfo('html_type');
     $content .= "; charset=";
     $content .= get_bloginfo('charset');
     $content .= "\" />";
@@ -58,7 +58,7 @@ if ( function_exists('childtheme_override_doctitle') )  {
 } else {
 	/**
 	 * Display the content of the title tag
-	 * 
+	 *
 	 * Override: childtheme_override_doctitle
 	 * Filter: cleanyetibasic_doctitle_separator
 	 *
@@ -72,9 +72,9 @@ if ( function_exists('childtheme_override_doctitle') )  {
 
 /**
  * Display links to RSS feed
- * 
+ *
  * This can be switched on or off using cleanyetibasic_show_rss. Default: ON
- * 
+ *
  * Filter: cleanyetibasic_show_rss
  * Filter: cleanyetibasic_rss
  */
@@ -95,9 +95,9 @@ function cleanyetibasic_show_rss() {
 
 /**
  * Display pingback link
- * 
+ *
  * This can be switched on or off using cleanyetibasic_show_pingback. Default: ON
- * 
+ *
  * Filter: cleanyetibasic_show_pingback
  * Filter: cleanyetibasic_pingback_url
  */
@@ -115,11 +115,11 @@ function cleanyetibasic_show_pingback() {
 
 /**
  * Add the default stylesheet to the head of the document.
- * 
- * Register and enqueue cleanyetibasic style.css
- * 
  *
- * Register Ubuntu font 
+ * Register and enqueue cleanyetibasic style.css
+ *
+ *
+ * Register Ubuntu font
  * Ubuntu Font: http://font.ubuntu.com
  * Copyright: 2013 Canonical ltd.
  * License: http://font.ubuntu.com/ufl/ubuntu-font-licence-1.0.txt
@@ -191,7 +191,7 @@ add_action('wp_enqueue_scripts','cleanyetibasic_head_scripts');
  * Return the default arguments for wp_page_menu()
  *
  * This is used as fallback when the user has not created a custom nav menu in wordpress admin
- * 
+ *
  * Filter: cleanyetibasic_page_menu_args
  *
  * @return array
@@ -213,7 +213,7 @@ function cleanyetibasic_page_menu_args() {
 
 /**
  * Return the default arguments for wp_nav_menu
- * 
+ *
  * Filter: cleanyetibasic_primary_menu_id <br>
  * Filter: cleanyetibasic_nav_menu_args
  *
@@ -294,7 +294,7 @@ if ( function_exists( 'childtheme_override_body' ) )  {
 	 * Creates the body tag
 	 */
 	 function cleanyetibasic_body() {
-    	if ( apply_filters( 'cleanyetibasic_show_bodyclass',TRUE ) ) { 
+    	if ( apply_filters( 'cleanyetibasic_show_bodyclass',TRUE ) ) {
         	// Creating the body class
     		echo '<body ';
     		body_class();
@@ -308,7 +308,7 @@ if ( function_exists( 'childtheme_override_body' ) )  {
 
 /**
  * Register action hook: cleanyetibasic_before
- * 
+ *
  * Located in header.php, just after the body tag, before anything else.
  */
 function cleanyetibasic_before() {
@@ -318,7 +318,7 @@ function cleanyetibasic_before() {
 
 /**
  * Register action hook: cleanyetibasic_abovefooter
- * 
+ *
  * Located in header.php, inside the header div
  */
 function cleanyetibasic_aboveheader() {
@@ -328,7 +328,7 @@ function cleanyetibasic_aboveheader() {
 
 /**
  * Register action hook: cleanyetibasic_abovefooter
- * 
+ *
  * Located in header.php, inside the header div
  */
 function cleanyetibasic_header() {
@@ -346,7 +346,7 @@ if ( function_exists( 'childtheme_override_brandingopen' ) )  {
 	} else {
 	/**
 	 * Display the opening of the #branding div
-	 * 
+	 *
 	 * Override: childtheme_override_brandingopen
 	 */
     function cleanyetibasic_brandingopen() {
@@ -371,15 +371,15 @@ if ( function_exists( 'childtheme_override_blogtitle' ) )  {
 } else {
     /**
      * Display the blog title within the #branding div
-     * 
+     *
      * Override: childtheme_override_blogtitle
-     */    
-    function cleanyetibasic_blogtitle() { 
+     */
+    function cleanyetibasic_blogtitle() {
     ?>
-    
+
     	<div id="blog-title"><a href="<?php echo esc_url(home_url()); ?>/" title="<?php bloginfo('name'); ?>" rel="home"><h1><?php bloginfo('name'); ?></h1></a></div>
-    
-    <?php 
+
+    <?php
     }
 }
 
@@ -396,7 +396,7 @@ if ( function_exists('childtheme_override_blogdescription') )  {
 } else {
     /**
      * Display the blog description within the #branding div
-     * 
+     *
      * Override: childtheme_override_blogdescription
      */
     function cleanyetibasic_blogdescription() {
@@ -421,9 +421,9 @@ if ( function_exists('childtheme_override_brandingclose') )  {
 } else {
     /**
      * Display the closing of the #branding div
-     * 
+     *
      * Override: childtheme_override_brandingclose
-     */    
+     */
     function cleanyetibasic_brandingclose() {
     	echo "\t\t</div><!--  #branding -->\n";
     }
@@ -442,28 +442,21 @@ if ( function_exists('childtheme_override_access') )  {
 } else {
     /**
      * Display the #access div
-     * 
+     *
      * Override: childtheme_override_access
-     */    
+     */
     function cleanyetibasic_access() {
     global $cleanyetibasic_options;
     $cleanyetibasic_options = cleanyetibasic_get_options();
     $sticky = ( ( 'sticky' == $cleanyetibasic_options['header_top_bar_position'] ) ? ' class="found-sticky"' : '' );
     $menuclass = $cleanyetibasic_options['header_top_bar_menu_position'];
-    ?> 
+    ?>
         <div id="access"<?php echo $sticky; ?>>
             <nav class="top-bar" data-topbar>
-                <ul class="title-area">
-                <!-- Title Area -->
-                    <li class="name">
-                        <?php if ( 'true' == $cleanyetibasic_options['display_top_bar_title'] ) : ?><h1><a href="<?php echo esc_url(home_url()); ?>/" title="<?php bloginfo('name'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1><?php endif; ?>
-                    </li>
-                    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                    <li class="toggle-topbar menu-icon"><a href="#"><?php _e( 'Menu', 'cleanyetibasic' ); ?></a></li>
-                </ul>
-                
+            
+
                 <section class="top-bar-section">
-<?php 
+<?php
     	if ( ( function_exists("has_nav_menu") ) && ( has_nav_menu( apply_filters('cleanyetibasic_primary_menu_id', 'primary-menu') ) ) ) {
     	    echo  wp_nav_menu(cleanyetibasic_nav_menu_args());
     	} else {
@@ -474,12 +467,12 @@ if ( function_exists('childtheme_override_access') )  {
             echo  "<li><a href=\"";
             echo  home_url() . '/wp-admin/nav-menus.php';
             echo  "\">" . __( 'Customize Here...', 'cleanyetibasic' ) . "</a></li>\n";
-            echo  "</ul>\n";	
+            echo  "</ul>\n";
     	}
 ?>
-                </section>             
+                </section>
             </nav>
-        </div><!-- #access -->          
+        </div><!-- #access -->
 
 <?php
    }
@@ -489,11 +482,11 @@ add_action('cleanyetibasic_header','cleanyetibasic_access',1);
 
 /**
  * Register action hook: cleanyetibasic_belowheader
- * 
+ *
  * Located in header.php, just after the header div
  */
 function cleanyetibasic_belowheader() {
-    
+
     do_action('cleanyetibasic_belowheader');
 }   // end cleanyetibasic_belowheader
 ?>

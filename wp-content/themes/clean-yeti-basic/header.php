@@ -36,6 +36,7 @@
 	 */
 	wp_head();
 ?>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,400italic' rel='stylesheet' type='text/css'>
 </head>
 
 <?php

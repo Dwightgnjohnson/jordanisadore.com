@@ -35,18 +35,18 @@ body {
 }
 
 body {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 
 .keystroke, kbd, code, pre {
-  font-family: "Ubuntu Mono", sans-serif;
-  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
   color: #373737;
 }
 

@@ -31,7 +31,7 @@ and Blueprint http://www.blueprintcss.org/
  * 7 - Menu (Main Menu/Navigation) + Mobile menu
  * 8 - Posts & Pages
  * 9 - Post Formats
- * 10 - About me Page 
+ * 10 - About me Page
  * 11 - Media
  * 12 - Comments
  * 13 - Widgets & Sidebar
@@ -54,7 +54,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
-	font-family: inherit;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 100%;
 	font-style: inherit;
 	font-weight: inherit;
@@ -68,6 +68,7 @@ html {
 	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  background: url(images/skinny.jpg) no-repeat fixed right top;
 }
 *,
 *:before,
@@ -77,7 +78,6 @@ html {
 	box-sizing:         border-box;
 }
 body {
-	background: #fff;
 }
 article,
 aside,
@@ -125,7 +125,7 @@ a img {
 input,
 textarea { /* stops iOS from adding rounded corners and glare to inputs and textareas */
     -webkit-appearance: none !important;
-    -webkit-border-radius:0 !important; 
+    -webkit-border-radius:0 !important;
     border-radius:0 !important;
 }
 
@@ -134,8 +134,6 @@ textarea { /* stops iOS from adding rounded corners and glare to inputs and text
 
 body {
 	min-width: 280px;
-	background: #fff;
-	font-family: "PT Sans", sans-serif;
 }
 body,
 button,
@@ -143,7 +141,6 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: 'PT Sans', sans-serif;
 	font-size: 14px;
 	line-height: 16px;
 }
@@ -198,7 +195,7 @@ img {
 .main-navigation,
 #secondary,
 .site-info {
-	max-width: 1000px; 
+	max-width: 1000px;
 	margin: auto;
 }
 
@@ -210,27 +207,23 @@ img {
 	margin: 40px auto 0 auto;
 }
 .page-title {
-	font-family: "Open Sans", sans-serif;
-	padding:30px;
-	font-weight: 400;
-	background-color: #f5f5f5;
+  font-weight:600;
+  padding:30px;
+	background-color: none;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
  	-moz-border-radius: 2px;
 	text-align: center;
 	font-size: 30px;
 	line-height: 40px;
-	color: #9e9e9e;	
+	color: #9e9e9e;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 .site-title {
-	font-family: 'Lustria', sans-serif;
-	margin: 0;
 	padding: 60px 10px 0 10px;
-	font-size: 52px;
+	font-size: 65px;
 	line-height: 56px;
-	font-weight: 700;
 	text-align: center;
 	text-decoration: none;
 	color: #4B4A47;
@@ -238,6 +231,9 @@ img {
 .site-title a {
 	text-decoration: none;
 	color: #4B4A47;
+}
+.site-title a:hover {
+  text-decoration: none;
 }
 .site-branding {
 	text-align: center;
@@ -257,56 +253,49 @@ img {
 ----------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight:700;
 	clear: both;
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 h1 {
-	font-family: 'Lustria', sans-serif;
 	font-size: 42px;
 	line-height:46px;
 	color: #4B4A47;
-	font-weight:bold;
 	margin: 50px 0 20px;
 }
-h2 {	
-	font-family: 'Lustria', sans-serif;
+h2 {
 	font-size: 32px;
 	line-height:36px;
-	font-weight:bold;
-	color: #4B4A47;	
+	color: #4B4A47;
 	margin: 40px 0 20px;
 }
-h3 {	
+h3 {
 	font-size: 32px;
 	line-height:36px;
-	color: #4B4A47;	
-	font-weight:bold;
+	color: #4B4A47;
 	margin: 40px 0 20px;
 }
-h4 {	
+h4 {
 	font-size: 22px;
 	line-height:26px;
-	color: #4B4A47;	
-	font-weight:bold;
+	color: #4B4A47;
 	margin: 30px 0 10px;
 }
-h5 {	
+h5 {
 	font-size: 18px;
-	font-weight:bold;
 	line-height:24px;
-	color: #4B4A47;	
+	color: #4B4A47;
 	margin: 30px 0 10px;
 }
-h6 {	
+h6 {
 	font-size: 16px;
 	line-height:22px;
-	font-weight:bold;
-	color: #4B4A47;	
+	color: #4B4A47;
 	margin: 30px 0 10px;
 }
 #tinymce.wp-editor { /* adding padding to tinymce editor */
-    padding: 20px; 
+    padding: 20px;
 }
 hr {
 	background-color: #E6E6E6;
@@ -358,7 +347,6 @@ address {
 }
 pre {
 	background: #f5f5f5;
-	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	line-height: 16px;
 	margin-bottom: 1.6em;
@@ -400,8 +388,8 @@ big {
 figure {
 	margin: 0;
 }
-address {	
-	font-style: italic;	
+address {
+	font-style: italic;
 }
 table {
 	margin: 0 0 1.5em;
@@ -444,7 +432,7 @@ input[type="submit"] {
   -moz-box-shadow: none;
   box-shadow: none;
   border: none;
-  text-shadow: none;  
+  text-shadow: none;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -501,7 +489,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
-	border-color: #37B8EB;
+	border-color: #ececec;
 }
 input[type="text"],
 input[type="email"],
@@ -528,12 +516,14 @@ tbody tr.last td{border-bottom:0;}
 /* Links */
 a,
 a:visited {
-	color: #37B8EB;
+	color: #4b4a47;
+  text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #EF3636;
+	color: #4b4a47;
+  text-decoration:underline;
 }
 
 /* Alignment */
@@ -550,7 +540,19 @@ a:active {
 	display: block;
 	margin: 0 auto;
 }
+#bottomcenter {
+  margin:0;padding:0;
+  text-align:center;
+  opacity:.5;
 
+}
+#bottomcenter:hover {
+  opacity:1;
+  -webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+}
 /* =Clearing
 ----------------------------------------------- */
 
@@ -582,10 +584,9 @@ a:active {
 ----------------------------------------------- */
 
 .main-navigation {
-	font-family: 'Open Sans', sans-serif;
 	clear: both;
-	display: block;	
-	padding-top: 15px; 
+	display: block;
+	padding-top: 15px;
 }
 .main-navigation ul {
 	margin: 0;
@@ -593,7 +594,6 @@ a:active {
 	text-align:center;
 }
 .main-navigation li {
-	font-family: 'PT Sans', sans-serif;
 	font-size: 13px;
 	text-transform: uppercase;
 	display:inline-block;
@@ -616,7 +616,6 @@ a:active {
 }
 .main-navigation ul ul {
 	background-color: #fff;
-	border: 1px solid #E6E6E6;
 	top: 40px;
 	display: none;
 	text-align: left;
@@ -630,7 +629,6 @@ a:active {
 	left: 100%;
 }
 .main-navigation ul ul a {
-	width: 200px;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
@@ -638,13 +636,14 @@ a:active {
 .main-navigation li li a:hover,
 .main-navigation .sub-menu .current_page_item a,
 .main-navigation li li .current-menu-item a {
-	background-color: #f5f5f5;
-	border-bottom: 0;
 }
-.main-navigation li a:hover,
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
-	border-bottom: 2px solid #f5f5f5;
+.main-navigation li a:hover {
+  background-color:gray;
+  color:white;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 /* Mobile menu */
@@ -654,7 +653,7 @@ a:active {
 	padding: 30px;
 	margin-top: -10px;
 	width: 100%;
-	background-color: #f5f5f5; 
+
 }
 .menu-mobile .site-branding-mobile {
 	padding: 0;
@@ -667,19 +666,19 @@ a:active {
 }
 .menu-mobile .site-branding-mobile .site-title {
 	max-width: 220px;
-	font-size: 22px;
+	font-size: 30px;
 	line-height:28px;
-	text-align: left;
+	text-align: center;
 	padding: 0;
 	padding-bottom: 10px;
-	margin: 0;
+	padding-top: 21px;
 }
-#menu-toggle {	
+#menu-toggle {
 	margin-top: 20px;
 	float:right;
 	cursor: pointer;
 	font-size: 32px;
-	color: #EF3636;
+	color: pink;
 }
 #site-navigation-mobile {
 	margin: 80px 0 10px;
@@ -706,6 +705,11 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+  font-weight:700;
+}
+#site-navigation-mobile ul .sub-menu li a {
+  padding:0;margin:0;
+  font-weight:400;
 }
 
 /* =Posts & Pages
@@ -733,7 +737,6 @@ a:active {
 }
 .type-page .entry-title,
 .entry-title {
-	font-family: 'Lustria', sans-serif;
 	margin: 10px 0 10px 0;
 	font-size: 41px;
 	line-height:50px;
@@ -777,7 +780,6 @@ a:active {
 	text-align: center;
 	font-size: 42px;
 	line-height: 54px;
-	font-family: 'Lustria', sans-serif;
 	padding-bottom: 30px;
 	font-weight: 700;
 	-ms-word-wrap: break-word;
@@ -793,9 +795,8 @@ a:active {
 	color: #EF3636;
 }
 .entry-meta,
-.comments-title, 
+.comments-title,
 .page-links .intro {
-	font-family: 'Roboto', sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -829,7 +830,7 @@ a:active {
 	text-align: center;
 }
 .page-links a {
-	color: #808080;	
+	color: #808080;
 }
 .page-links .intro {
 	margin: 0;
@@ -837,11 +838,11 @@ a:active {
 	padding-right: 5px;
 }
 .format-bg .page-links span,
-.page-links a span { 
+.page-links a span {
  background-color: #fff; /* if an article with a background (#f5f5f5) is paged */
 }
 .page-links span { /* active page */
-	background-color: #f5f5f5;	
+	background-color: #f5f5f5;
 	border-bottom: 2px solid #d2d2d2;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -852,7 +853,7 @@ a:active {
 	margin-top: 20px;
 	display: inline-block;
 }
-.page-links a span { 
+.page-links a span {
 	background-color: #f5f5f5;
 	border-bottom: 2px solid transparent;
 }
@@ -865,7 +866,6 @@ a:active {
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
  	-moz-border-radius: 2px;
-  	font-family: 'Open Sans', sans-serif;
 	padding: 10px 10px 10px 15px;
 	margin: 40px auto auto auto;
 	background-color: #f06060;
@@ -949,7 +949,7 @@ a:active {
 	margin: 0;
 }
 .navigation a {
-	color: #808080;	
+	color: #808080;
 }
 .navigation li {
 	font-size: 20px;
@@ -1032,7 +1032,7 @@ a:active {
 	background-color: #f5f5f5;
 }
 .format-bg .post-symbol {
-	margin-top: 10px;	
+	margin-top: 10px;
 }
 .format-aside .entry-title,
 .format-status .entry-title,
@@ -1043,7 +1043,6 @@ a:active {
 .format-audio .entry-title {
 	margin-top: 10px;
 	text-transform: uppercase;
-	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 24px;
@@ -1057,7 +1056,7 @@ a:active {
 	line-height: 42px;
 }
 .format-link .entry-content a:visited {
-	color: #37B8EB;
+	color: #ececec;
 }
 .format-link .entry-content a:hover,
 .format-link .entry-content a:focus,
@@ -1102,10 +1101,10 @@ a:active {
 }
 /* speaker one has the default text color */
 .chat-row.chat-speaker-2 {
-	border-left: 4px solid #37B8EB;
+	border-left: 4px solid #ececec;
 }
 .chat-speaker-2 {
-	color:#37B8EB;
+	color:#ececec;
 }
 .chat-row.chat-speaker-3 {
 	border-left: 4px solid #EF3636;
@@ -1174,7 +1173,7 @@ a:active {
 .format-quote .entry-content {
 	color: #9e9e9e;
 }
-.format-quote cite { 
+.format-quote cite {
 	font-weight: 700;
 }
 .format-status .entry-content {
@@ -1291,7 +1290,8 @@ video {
 }
 .wp-caption-text {
 	text-align: center;
-	padding: 20px 0 30px;
+	padding: 5px 0 20px;
+  font-weight:600;
 }
 .attachment .attachment {
 	text-align: center;
@@ -1353,6 +1353,9 @@ video {
 	margin-left: 42px;
 	margin-top: -36px;
 }
+.comment-name a {
+  color:black;
+}
 .comment-metadata {
 	padding-top:2px;
 	font-size: 12px;
@@ -1381,13 +1384,13 @@ video {
 	margin: 20px 0 20px 0;
 }
 #comments .children {
-	list-style: none;	
+	list-style: none;
 }
 .comment-metadata {
 	list-style: none;
 	margin: 0;
 }
-.comment {	
+.comment {
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
  	-moz-border-radius: 2px;
@@ -1442,7 +1445,7 @@ video {
 }
 .comment-notes,
 .form-allowed-tags,
-.form-allowed-tags code, 
+.form-allowed-tags code,
 .logged-in-as {
 	font-size:12px;
 	line-height: 13px;
@@ -1470,9 +1473,10 @@ video {
 	overflow: auto;
 	font-size: 14px;
 	line-height: 18px;
-	background-color: #f5f5f5;
-	padding: 10px 0 15px;
+	background-color: none;
+	padding: 0;
 	list-style: none;
+
 }
 .sidebar a {
 	text-decoration: none;
@@ -1484,7 +1488,6 @@ video {
 .widget-title {
 	color: #808080;
 	font-weight: 400;
-	font-family: "PT Sans", sans-serif;
 	margin: 0 0 10px 0;
 	font-size: 16px;
 	line-height: 20px;
@@ -1494,14 +1497,15 @@ video {
 	padding-bottom: 5px;
 }
 .widget-area {
-	margin-left: -30px;
+	margin-left: 0px;
 }
 .widget {
 	line-height: 18px;
-	margin: 0 0 20px 30px;
+  margin-right:-110px;
 	width: 313px;
-	float:left;
-	padding: 10px;
+	float:right;
+	padding: 0px;
+
 }
 .widget ol,
 .widget ul {
@@ -1509,6 +1513,7 @@ video {
 }
 .widget li {
 	margin-top: 5px;
+
 }
 
 /* Make sure select elements fit in widgets */
@@ -1518,10 +1523,11 @@ video {
 
 /* Search widget */
 .widget_search .search-submit {
-	display: none;
+	margin-left:-88px;
+  display:none;
 }
 .widget_search input[type="search"] {
-	padding: 10px;
+
 }
 
 /* calendar widget */
@@ -1532,7 +1538,7 @@ video {
 	width: 100%;
 	background-color: #fff;
 }
-#wp-calendar caption { 
+#wp-calendar caption {
 	font-size: 14px;
 	margin: 10px 0 15px;
 	color: #808080;
@@ -1544,8 +1550,8 @@ video {
 #wp-calendar thead th {
 	padding-bottom: 10px;
 	}
-#wp-calendar tbody { 
-	color: #aaa; 
+#wp-calendar tbody {
+	color: #aaa;
 }
 #wp-calendar tbody td {
 	background: #fff;
@@ -1564,7 +1570,7 @@ video {
 	text-transform: uppercase;
 	text-align: right;
 }
-#wp-calendar tfoot #prev a { 
+#wp-calendar tfoot #prev a {
 	font-size: 10px;
 	text-transform: uppercase;
 	padding-top: 10px;
@@ -1582,7 +1588,6 @@ video {
 	text-decoration: none;
 }
 .site-footer {
-	background-color: #f5f5f5;
 	padding: 30px;
 }
 
@@ -1594,14 +1599,17 @@ video {
 	color: #4B4A47;
 }
 .error-404 .search-form {
-	margin-bottom: 50px;
+	margin-bottom: 0px;
+}
+.search-submit {
+  display:none;
 }
 .error-404 i {
 	font-size: 60px;
 	line-height: 70px;
 	margin-bottom: 20px;
 }
-.error-404 { 
+.error-404 {
 	text-align: center;
 }
 
@@ -1639,11 +1647,13 @@ video {
 	.menu-mobile,
 	.toggled .nav-menu {
 		display: block !important;
+    background: url(images/skinnymobile.jpg) no-repeat fixed right top;
+
 	}
 	.description {
 		font-size: 14px;
 		line-height: 17px;
-		margin: 0;		
+		margin: 0;
 		padding: 0;
 		padding-top: 10px;
 	}
@@ -1670,7 +1680,9 @@ video {
 	.hentry {
 		margin: 80px 0 80px;
 	}
-
+html {
+  background:white;
+}
 }
 
 @media screen and (max-width: 670px) {
@@ -1678,12 +1690,12 @@ video {
 	#secondary {
 		width: 312px;
 		margin: auto;
-	}	
+	}
 
 }
 
 @media screen and (max-width: 500px) {
-	
+
 	.bio .intro {
 		padding: 10px;
 		margin-bottom: 10px;
@@ -1744,7 +1756,7 @@ video {
 	.format-quote .entry-content {
 		font-size: 22px;
 		line-height: 30px;
-	}	
+	}
 	#comments,
 	.single-footer {
 		margin-top: 80px;
@@ -1754,7 +1766,7 @@ video {
 	}
 	.entry-content h1,
 	.type-page .entry-title,
-	.error-404 .page-title, 
+	.error-404 .page-title,
 	.entry-title {
 		font-size: 24px;
 		line-height:30px;
@@ -1763,7 +1775,7 @@ video {
 		font-size: 28px;
 		line-height: 32px;
 	}
-	.entry-content h2 {	
+	.entry-content h2 {
 		font-size: 24px;
 		line-height:28px;
 	}
@@ -1806,10 +1818,18 @@ video {
 	.single-content-wrapper {
 		padding-top:0px;
 	}
+  .widget {
+    line-height: 18px;
+    margin-right:-55px;
+    width: 313px;
+    float:right;
+    padding: 0px;
+
+  }
 }
 
 @media screen and (max-width: 380px) {
-	
+
 	.sep-meta {
 		margin: 10px 0 0 10px;
 	}

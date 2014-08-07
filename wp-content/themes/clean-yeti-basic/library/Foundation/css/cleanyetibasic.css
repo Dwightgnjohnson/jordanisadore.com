@@ -1336,33 +1336,33 @@ select {
     left: auto;
   }
 }
-/* 
-  Mixin: accordion-container() 
+/*
+  Mixin: accordion-container()
 
   Decription: Responsible for the container component of accordions, generating styles relating to a margin of zero and a clearfix
 
-  Explicit Dependencies: a clearfix mixin *is* defined. 
+  Explicit Dependencies: a clearfix mixin *is* defined.
 
-  Implicit Dependencies: None 
+  Implicit Dependencies: None
 
 */
 /*
   Mixin: accordion-navigation( $bg, $hover-bg, $active-bg, $padding, $active_class,  $font-color, $font-size, $font-family){
-  
+
     @params $bg-color: [ color or string ]: Specify the background color for the navigation element
     @params $hover-bg-color [ color or string ]: Specify the background color for the navigation element when hovered
-    @params $active-bg [ color or string ]: Specify the background color for the navigation element when clicked and not released. 
-    @params $active_class [ string ]: Specify the class name used to keep track of which accordion tab should be visible 
-    @params $font-color [ color or string ]: Color of the font for accordion 
-    @params $font-size [ number ]: Specifiy the font-size of the text inside the navigation element 
+    @params $active-bg [ color or string ]: Specify the background color for the navigation element when clicked and not released.
+    @params $active_class [ string ]: Specify the class name used to keep track of which accordion tab should be visible
+    @params $font-color [ color or string ]: Color of the font for accordion
+    @params $font-size [ number ]: Specifiy the font-size of the text inside the navigation element
     @params $font-family [ string ]: Specify the font family for the text of the navigation of the accorion
 */
 /*
 
-  Mixin: accordion-content($bg, $padding, $active-class) 
-    @params $padding [ number ]: Padding for the content of the container 
-    @params $bg [ color  ]: Background color for the content when it's visible 
-    @params $active_class [ string ]: Class name used to keep track of which accordion tab should be visible. 
+  Mixin: accordion-content($bg, $padding, $active-class)
+    @params $padding [ number ]: Padding for the content of the container
+    @params $bg [ color  ]: Background color for the content when it's visible
+    @params $active_class [ string ]: Class name used to keep track of which accordion tab should be visible.
 */
 .accordion {
   margin-bottom: 0;
@@ -5488,7 +5488,6 @@ meta.foundation-mq-topbar {
   width: 100%;
   left: 0;
   position: fixed;
-  top: 0;
   z-index: 99;
 }
 .fixed.expanded:not(.top-bar) {
@@ -5512,7 +5511,6 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #333333;
   margin-bottom: 0;
 }
 .top-bar ul {
@@ -5644,9 +5642,8 @@ meta.foundation-mq-topbar {
   color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 600;
   font-size: 0.8125rem;
-  font-weight: normal;
   text-transform: none;
 }
 .top-bar-section ul li > a.button {
@@ -5846,7 +5843,7 @@ meta.foundation-mq-topbar {
 
 @media only screen and (min-width: 40.063em) {
   .top-bar {
-    background: #333333;
+    background: pink;
     overflow: visible;
   }
   .top-bar:before, .top-bar:after {
@@ -5861,6 +5858,7 @@ meta.foundation-mq-topbar {
   }
   .top-bar .title-area {
     float: left;
+    display:hidden;
   }
   .top-bar .name h1 a {
     width: auto;
@@ -5905,7 +5903,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li:not(.has-form) a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: #333333;
+    background: pink;
   }
   .top-bar-section li:not(.has-form) a:not(.button):hover {
     background-color: #555555;

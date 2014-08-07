@@ -13,12 +13,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php echo esc_attr(get_theme_mod('footer_text', 'Gravit Theme powered by WordPress')); ?>
 		</div><!-- .site-info -->
+    <div id="bottomcenter" class="aligncenter"><p>&copy; Jordan Isadore | <a href="http://www.designsbydwight.com">Designed By Dwight</a></p></div>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
