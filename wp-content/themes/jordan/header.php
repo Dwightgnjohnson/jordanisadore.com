@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,400italic' rel='stylesheet' type='text/css'>
+<link rel="icon" href="http://www.jordanisadore.com/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.jordanisadore.com/favicon.ico" type="image/x-icon" />
 <?php wp_head(); ?>
 </head>
 
