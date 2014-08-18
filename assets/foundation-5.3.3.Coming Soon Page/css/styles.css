@@ -1,11 +1,23 @@
 html {
-  background: url(../img/jordanRight.jpg) no-repeat fixed right top;
-
-.ComingSoon {
+  overflow:hidden;
+}
+body {
+  background:none;
+}
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: white;
+background-size: cover;
+}
+  .ComingSoon {
   z-index:2;
   text-align:center;
-  margin-top:15%;
-}
+  padding-top:100px;
+  background-color: none;
+  height:500px;
+  }
   .ComingSoon h1 {
     font-size:300%;
     font-weight: 600;
@@ -14,15 +26,26 @@ html {
   .ComingSoon i {
     font-size: 2em;
     font-weight: 100;
-
   }
-@media (max-width:1024px) {
-}
-@media (max-width:480px) {
-}
 
+  img#joespub {
+    width:20%;
+    margin: 1% auto;
+  }
+.jordanRight {
+  z-index:1;
+  margin:0;padding:0;border:0;
+  float:right;
+  margin-right:-8px;
+  margin-top:-20%;
+}
 /* Smartphones (portrait) ----------- */
-	@media (max-width:320px) {
+@media screen and (max-width: 480px) {
+  .ComingSoon {
+    padding-top:10px;
+    background-color: none;
+    height:500px;
+  }
   .ComingSoon h1 {
     font-size:200%;
     font-weight: 600;
@@ -30,5 +53,10 @@ html {
   .ComingSoon i {
     font-size: 1.5em;
     font-weight: 100;
+
+  }
+  img#joespub {
+    width:300px;
+    margin: 0px auto;
   }
 }
