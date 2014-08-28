@@ -30,7 +30,7 @@ get_header(); ?>
 				?>
 
 			<?php if (($wp_query->current_post + 1) < ($wp_query->post_count)) { /* just add divider between posts */
- 				echo '<div class="post-item-divider"><i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i><i class="fa fa-angle-down"></i></div>';
+ 				echo '<div class="post-item-divider"><i class="fa fa-male fa-spin"></i>&nbsp;&nbsp;<i class="fa fa-male fa-spin"></i>&nbsp;&nbsp;<i class="fa fa-male fa-spin"></i>&nbsp;&nbsp;<i class="fa fa-male fa-spin"></i>&nbsp;&nbsp;<i class="fa fa-male fa-spin"></i>&nbsp;&nbsp;</div>';
 			} ?>
 
 			<?php endwhile; ?>

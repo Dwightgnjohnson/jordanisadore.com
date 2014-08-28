@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 		</div><!-- .site-info -->
-    <div id="bottomcenter" class="aligncenter"><p>&copy; Jordan Isadore | <a href="http://www.designsbydwight.com">Designed By Dwight</a></p></div>
+    <div id="bottomcenter" class="aligncenter"><p><i class="fa fa-copyright"></i> Jordan Isadore | <a href="http://www.designsbydwight.com"><i class="fa fa-rocket"></i> Designed By Dwight</a></p></div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->

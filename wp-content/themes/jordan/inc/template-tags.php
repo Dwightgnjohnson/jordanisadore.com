@@ -102,7 +102,7 @@ function jordan_comment( $comment, $args, $depth ) {
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
-					
+
 					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
 
 					<div class="comment-name">
@@ -111,7 +111,7 @@ function jordan_comment( $comment, $args, $depth ) {
 							<i class="fa fa-star"></i>
 						</div>
 					</div>
-					
+
 					<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
@@ -125,12 +125,12 @@ function jordan_comment( $comment, $args, $depth ) {
 
 				<div class="comment-content">
 					<?php comment_text(); ?>
-				</div><!-- .comment-content -->				
+				</div><!-- .comment-content -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
 				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'jordan' ); ?></p>
 				<?php endif; ?>
-			</footer><!-- .comment-meta -->			
+			</footer><!-- .comment-meta -->
 
 			<?php
 				comment_reply_link( array_merge( $args, array(
@@ -154,13 +154,13 @@ if ( ! function_exists( 'jordan_posted_on' ) ) :
  */
 function jordan_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	
+
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() )
 	);
 
-	if ( is_sticky() ) { 
+	if ( is_sticky() ) {
 		echo '<span class="sticky-meta"><i class="fa fa-exclamation-circle"></i> ' . __('Sticky','jordan') .'</span>';
 	}
 
@@ -189,8 +189,8 @@ function jordan_posted_on() {
 	}
 
 	if ( comments_open() ) :
-		echo '<span class="sep-meta"></span> <span class="comments-meta">';				
-		echo comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'jordan' ) . '</span>', __( '1 Reply', 'jordan' ), __( '% Replies', 'jordan' ) ) . '</span>';
+		echo '<span class="sep-meta"></span> <span class="comments-meta">';
+		echo comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply <i class="fa fa-comment"></i>', 'jordan' ) . '</span>', __( '1 Reply', 'jordan' ), __( '% Replies', 'jordan' ) ) . '</span>';
 	endif; // comments_open();
 
 }
